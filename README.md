@@ -58,3 +58,9 @@
     
     Resets + commonly used clases
     
+2. Create mail-message class. 
+   
+   `$ ng generate class mail-message`
+   
+   Add properties to class: id (default to null), subject, sender, recipient, dateSent, body. 
+
