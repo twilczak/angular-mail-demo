@@ -63,4 +63,9 @@
    `$ ng generate class mail-message`
    
    Add properties to class: id (default to null), subject, sender, recipient, dateSent, body. 
-
+   
+3. Create mail.service
+   
+   `$ ng genreate service mail`
+   
+   Add methods to get inbox and outbox messages, and handle errors
