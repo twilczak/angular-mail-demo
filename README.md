@@ -51,3 +51,10 @@
    `$ ng test`
    
    Watches for file changes and re-runs tests
+
+### Step 2 - Mailbox Infrastructure
+
+1. Add Global Styles
+    
+    Resets + commonly used clases
+    
