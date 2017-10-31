@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 import { MailMessage } from '../../mail-message';
+import {MailboxService} from '../../mailbox.service';
 
 @Component({
   selector: 'tw-mailbox-list',
@@ -9,17 +10,15 @@ import { MailMessage } from '../../mail-message';
 })
 export class MailboxListComponent {
 
-  @Input() messages: MailMessage[];
-
-  @Input() mailbox: string;
+  @Input() mailbox: MailboxService;
 
   constructor() { }
 
   inboxActive() {
-    return this.mailbox === 'inbox';
+    return this.mailbox.name === 'inbox';
   }
 
   outboxActive() {
-    return this.mailbox === 'outbox';
+    return this.mailbox.name === 'outbox';
   }
 }

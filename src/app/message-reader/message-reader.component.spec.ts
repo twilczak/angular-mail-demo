@@ -4,6 +4,7 @@ import { MessageReaderComponent } from './message-reader.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { MessageDetailComponent } from './message-detail/message-detail.component';
 import { MailService } from '../mail.service';
+import { MailboxService } from '../mailbox.service';
 
 class MockMailService extends MailService {
   constructor() {
@@ -19,7 +20,10 @@ describe('MessageReaderComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ MessageReaderComponent, MessageDetailComponent ],
       imports: [ RouterTestingModule ],
-      providers: [ {provide: MailService, useValue: new MockMailService()} ]
+      providers: [
+        MailboxService,
+        {provide: MailService, useValue: new MockMailService()}
+      ]
     })
     .compileComponents();
   }));

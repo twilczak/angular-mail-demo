@@ -4,6 +4,7 @@ import { Observable } from 'rxjs/Observable';
 
 import { MailMessage } from '../mail-message';
 import { MailService}  from '../mail.service';
+import { MailboxService } from '../mailbox.service';
 
 @Component({
   selector: 'tw-message-reader',
@@ -13,7 +14,7 @@ import { MailService}  from '../mail.service';
 export class MessageReaderComponent implements OnInit {
 
   routeData$: Observable<Data>;
-  constructor(private route: ActivatedRoute, private router: Router, private mailService: MailService) { }
+  constructor(private route: ActivatedRoute, private router: Router, private mailService: MailService, private mailboxService: MailboxService) { }
 
   ngOnInit() {
     this.routeData$ = this.route.data;
@@ -24,6 +25,7 @@ export class MessageReaderComponent implements OnInit {
     const id: string = message.id;
 
     this.mailService.deleteMessage(mailbox, id).subscribe(() => {
+      this.mailboxService.deleteMessage(id);
       this.router.navigateByUrl(mailbox);
     });
   }

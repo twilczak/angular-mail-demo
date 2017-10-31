@@ -10,6 +10,7 @@ import { MailboxListComponent } from './mailbox/mailbox-list/mailbox-list.compon
 import { MailboxControlsComponent } from './mailbox/mailbox-controls/mailbox-controls.component';
 import { MessageReaderComponent } from './message-reader/message-reader.component';
 import { MessageDetailComponent } from './message-reader/message-detail/message-detail.component';
+import { MailboxService } from './mailbox.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,10 @@ import { MessageDetailComponent } from './message-reader/message-detail/message-
     BrowserModule,
     HttpModule
   ],
-  providers: [MailService],
+  providers: [
+    MailService,
+    MailboxService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

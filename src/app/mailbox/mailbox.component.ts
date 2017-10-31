@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
-import { ActivatedRoute, Data } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { MailboxService } from '../mailbox.service';
 import { Observable } from 'rxjs/Observable';
-import { Url } from 'url';
+
+import 'rxjs/add/observable/combineLatest';
 
 @Component({
   selector: 'tw-mailbox',
@@ -11,14 +13,14 @@ import { Url } from 'url';
 })
 export class MailboxComponent implements OnInit {
 
-  routeData$: Observable<Data>;
-  routeUrl$: Observable<Url[]>;
-
-  constructor( private route: ActivatedRoute ) {}
+  mailboxService$: Observable<MailboxService>;
+  constructor( private route: ActivatedRoute, private mailbox: MailboxService ) {}
 
   ngOnInit() {
-    this.routeUrl$ = this.route.url;
-    this.routeData$ = this.route.data;
+    this.mailboxService$ = Observable.combineLatest(this.route.url, this.route.data, (url, data) => {
+      this.mailbox.name = url[0].path;
+      this.mailbox.messages = data.messages;
+      return this.mailbox;
+    });
   }
-
 }

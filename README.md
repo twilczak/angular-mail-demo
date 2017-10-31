@@ -142,3 +142,8 @@
 
    "But wait, I can still see the message in the mailbox!!?"
    
+2. Add an in memory object to manage mailbox state
+   
+   `$ ng generate service mailbox`
+
+   Message component populates mailbox, Message Reader removes successfully deleted messages

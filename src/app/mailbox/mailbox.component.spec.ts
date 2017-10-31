@@ -8,6 +8,7 @@ import 'rxjs/add/observable/of';
 import { MailboxComponent } from './mailbox.component';
 import { MailboxListComponent } from './mailbox-list/mailbox-list.component';
 import { MailboxControlsComponent } from './mailbox-controls/mailbox-controls.component';
+import { MailboxService } from '../mailbox.service';
 
 const MockRoutes = {
   url: Observable.of([{path: '/inbox'}]),
@@ -23,6 +24,7 @@ describe('MailboxComponent', () => {
     TestBed.configureTestingModule({
       imports: [ RouterTestingModule ],
       providers: [
+        MailboxService,
         { provide: ActivatedRoute, useValue: MockRoutes }
       ],
       declarations: [ MailboxComponent, MailboxListComponent, MailboxControlsComponent ]
