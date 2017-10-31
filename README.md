@@ -147,3 +147,12 @@
    `$ ng generate service mailbox`
 
    Message component populates mailbox, Message Reader removes successfully deleted messages
+
+### 6 - Message Composer
+
+1. Create message-composer component
+
+   `$ ng generate component message-composer`
+
+   Smart component, handles send and cancel
+   

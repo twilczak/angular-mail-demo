@@ -11,6 +11,7 @@ import { MailboxControlsComponent } from './mailbox/mailbox-controls/mailbox-con
 import { MessageReaderComponent } from './message-reader/message-reader.component';
 import { MessageDetailComponent } from './message-reader/message-detail/message-detail.component';
 import { MailboxService } from './mailbox.service';
+import { MessageComposerComponent } from './message-composer/message-composer.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { MailboxService } from './mailbox.service';
     MailboxListComponent,
     MailboxControlsComponent,
     MessageReaderComponent,
-    MessageDetailComponent
+    MessageDetailComponent,
+    MessageComposerComponent
   ],
   imports: [
     AppRoutingModule,
