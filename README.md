@@ -121,3 +121,9 @@
    Smart component for reading messages
 
    Update routes and mailbox template to include child routing
+
+2. Add message-detail component
+
+   `$ ng generate component message-detail`
+
+   Dumb component for displaying a message
