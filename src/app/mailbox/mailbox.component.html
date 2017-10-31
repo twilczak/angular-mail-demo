@@ -2,5 +2,7 @@
   <tw-mailbox-controls></tw-mailbox-controls>
   <tw-mailbox-list [messages]="(routeData$ | async).messages" [mailbox]="(routeUrl$ | async)[0].path"></tw-mailbox-list>
 
+  <hr class="mailbox-border"/>
+
   <router-outlet></router-outlet>
 </section>

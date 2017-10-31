@@ -21,12 +21,30 @@ export class MailService {
       .catch(this.handleError);
   }
 
+  getInboxMessage(id: string): Observable<MailMessage> {
+    const url = `${this.hostUrl}/inbox`;
+
+    return this.http
+      .get(url)
+      .map(response => response.json().find(message => message.id === id) as MailMessage)
+      .catch(this.handleError);
+  }
+
   getOutboxMessages(): Observable<MailMessage[]> {
     const url = `${this.hostUrl}/outbox`;
 
     return this.http
       .get(url)
       .map(response => response.json() as MailMessage[])
+      .catch(this.handleError);
+  }
+
+  getOutboxMessage(id: string): Observable<MailMessage> {
+    const url = `${this.hostUrl}/outbox`;
+
+    return this.http
+      .get(url)
+      .map(response => response.json().find(message => message.id === id) as MailMessage)
       .catch(this.handleError);
   }
 

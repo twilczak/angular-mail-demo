@@ -127,3 +127,9 @@
    `$ ng generate component message-detail`
 
    Dumb component for displaying a message
+
+3. View messages from server
+  
+   Add service methods for viewing messages
+   
+   Add resolvers, update routes
