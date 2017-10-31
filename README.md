@@ -69,3 +69,13 @@
    `$ ng genreate service mail`
    
    Add methods to get inbox and outbox messages, and handle errors
+
+### Step 3 - Mailbox Component
+
+1. Add Routes
+
+    Used to navigate through different parts of the system. 
+    
+    Always start with routes as a way of getting an early understanding of how components are composed and interact with each other    
+
+    Without components angular router complains
