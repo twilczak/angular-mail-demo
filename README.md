@@ -79,3 +79,13 @@
     Always start with routes as a way of getting an early understanding of how components are composed and interact with each other    
 
     Without components angular router complains
+
+2. Add mailbox component
+
+   `$ ng generate component mailbox`
+       
+   Smart components responsible for gathering data and event handling (wiring)
+       
+   Typically don't have much styling, because they are not presenting anything
+  
+   Don't forget to namespace your components!

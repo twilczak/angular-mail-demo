@@ -1,20 +1,21 @@
 import { NgModule} from '@angular/core';
 import { RouterModule } from '@angular/router';
+import {MailboxComponent} from './mailbox/mailbox.component';
 
 const routes = [
   { path: '', redirectTo: '/inbox', pathMatch: 'full'},
-  { path: 'inbox',
+  { path: 'inbox', component: MailboxComponent,
     children: [
       { path: 'view', redirectTo: '/inbox', pathMatch: 'full' },
-      { path: 'view/:messageId' },
-      { path: 'compose' }
+      /*{ path: 'view/:messageId' },
+      { path: 'compose' }*/
     ]
   },
-  { path: 'outbox',
+  { path: 'outbox', component: MailboxComponent,
     children: [
       { path: 'view', redirectTo: '/outbox', pathMatch: 'full' },
-      { path: 'view/:messageId' },
-      { path: 'compose' }
+      /*{ path: 'view/:messageId' },
+      { path: 'compose' }*/
     ]
   }
 ];
