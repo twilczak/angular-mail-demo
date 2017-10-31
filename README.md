@@ -99,3 +99,7 @@
    Typically handle the styles, take data as input and dispatch events up to the container
 
    Don't forget to declare the new component in the unit test for the container!
+
+4. Get some data in your routes
+
+   You can have your components fetch data directly, however resolves ensure that data is available before route changes.
