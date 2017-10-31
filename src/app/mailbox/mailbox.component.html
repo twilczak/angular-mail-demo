@@ -1,5 +1,5 @@
 <section class="mailbox">
   Mailbox component!
   <!--<tw-mailbox-controls></tw-mailbox-controls>-->
-  <!--<tw-mailbox-list></tw-mailbox-list>-->
+  <tw-mailbox-list [messages]="(routeData$ | async).messages" [mailbox]="(routeUrl$ | async)[0].path"></tw-mailbox-list>
 </section>

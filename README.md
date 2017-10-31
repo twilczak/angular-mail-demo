@@ -89,3 +89,13 @@
    Typically don't have much styling, because they are not presenting anything
   
    Don't forget to namespace your components!
+
+3. Add mailbox-list component
+
+   `$ ng generate componet mailbox-list`
+    
+   Dumb components are responsible for presenting data - update container to pass observables to children
+    
+   Typically handle the styles, take data as input and dispatch events up to the container
+
+   Don't forget to declare the new component in the unit test for the container!

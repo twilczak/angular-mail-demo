@@ -1,0 +1,17 @@
+<ol class="mailbox-list">
+  <li class="mailbox-list-header">
+    <span class="recipient" *ngIf="outboxActive()">To</span>
+    <span class="sender" *ngIf="inboxActive()">From</span>
+    <span class="subject">Subject</span>
+    <span class="date-sent">Date</span>
+  </li>
+
+  <li class="mailbox-list-item" *ngFor="let message of messages">
+    <a class="mailbox-item-link" [routerLink]="['view', message.id]" routerLinkActive="is-active">
+      <span class="recipient" *ngIf="outboxActive()">{{message.recipient}}</span>
+      <span class="sender" *ngIf="inboxActive()">{{message.sender}}</span>
+      <span class="subject">{{message.subject}}</span>
+      <span class="date-sent">{{message.dateSent}}</span>
+    </a>
+  </li>
+</ol>
