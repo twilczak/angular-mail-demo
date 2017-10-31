@@ -7,10 +7,12 @@ import 'rxjs/add/observable/of';
 
 import { MailboxComponent } from './mailbox.component';
 import { MailboxListComponent } from './mailbox-list/mailbox-list.component';
+import { MailboxControlsComponent } from './mailbox-controls/mailbox-controls.component';
 
 const MockRoutes = {
   url: Observable.of([{path: '/inbox'}]),
-  data: Observable.of({messages: []})
+  data: Observable.of({messages: []}),
+  snapshot: {}
 };
 
 describe('MailboxComponent', () => {
@@ -23,7 +25,7 @@ describe('MailboxComponent', () => {
       providers: [
         { provide: ActivatedRoute, useValue: MockRoutes }
       ],
-      declarations: [ MailboxComponent, MailboxListComponent ]
+      declarations: [ MailboxComponent, MailboxListComponent, MailboxControlsComponent ]
     })
     .compileComponents();
   }));

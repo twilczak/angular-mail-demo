@@ -103,3 +103,11 @@
 4. Get some data in your routes
 
    You can have your components fetch data directly, however resolves ensure that data is available before route changes.
+
+5. Add mailbox controls component
+  
+    `$ ng generate component mailbox-controls`
+    
+    Simple series of links to navigate between mailboxes
+    
+    Again, this needs to be declared in the mailbox component spec to prevent failures

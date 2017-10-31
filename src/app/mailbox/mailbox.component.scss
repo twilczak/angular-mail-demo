@@ -2,4 +2,7 @@
   display: grid;
   grid-template-columns: 160px auto;
   padding: 10px;
+  border-bottom: 1px solid black;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
 }

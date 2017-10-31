@@ -7,12 +7,14 @@ import { MailService } from './mail.service';
 import { AppRoutingModule } from './app-routing.module';
 import { MailboxComponent } from './mailbox/mailbox.component';
 import { MailboxListComponent } from './mailbox/mailbox-list/mailbox-list.component';
+import { MailboxControlsComponent } from './mailbox/mailbox-controls/mailbox-controls.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MailboxComponent,
-    MailboxListComponent
+    MailboxListComponent,
+    MailboxControlsComponent
   ],
   imports: [
     AppRoutingModule,
