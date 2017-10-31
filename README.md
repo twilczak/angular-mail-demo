@@ -133,3 +133,12 @@
    Add service methods for viewing messages
    
    Add resolvers, update routes
+
+### 5 - Delete Message
+
+1. Add service method to handle deletes, hide message on delete
+
+   Smart component handles data interaction, response
+
+   "But wait, I can still see the message in the mailbox!!?"
+   

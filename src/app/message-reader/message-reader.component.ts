@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Data } from '@angular/router';
+import { ActivatedRoute, Data, Router } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
+
 import { MailMessage } from '../mail-message';
+import { MailService}  from '../mail.service';
 
 @Component({
   selector: 'tw-message-reader',
@@ -11,12 +13,19 @@ import { MailMessage } from '../mail-message';
 export class MessageReaderComponent implements OnInit {
 
   routeData$: Observable<Data>;
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private router: Router, private mailService: MailService) { }
 
   ngOnInit() {
     this.routeData$ = this.route.data;
   }
 
-  deleteMessage(message: MailMessage) {}
+  deleteMessage(message: MailMessage) {
+    const mailbox: string = this.route.snapshot.parent.url[0].path;
+    const id: string = message.id;
+
+    this.mailService.deleteMessage(mailbox, id).subscribe(() => {
+      this.router.navigateByUrl(mailbox);
+    });
+  }
 
 }

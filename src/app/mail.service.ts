@@ -48,6 +48,15 @@ export class MailService {
       .catch(this.handleError);
   }
 
+  deleteMessage(mailbox: string, id: string) {
+    const url = `${this.hostUrl}/${mailbox}/${id}`;
+
+    return this.http
+      .delete(url)
+      .map(res => res)
+      .catch(this.handleError);
+  }
+
   handleError(e) {
     console.error(e);
     return Observable.throw(new Error(e));
