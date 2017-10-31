@@ -1,4 +1,6 @@
 <section class="mailbox">
   <tw-mailbox-controls></tw-mailbox-controls>
   <tw-mailbox-list [messages]="(routeData$ | async).messages" [mailbox]="(routeUrl$ | async)[0].path"></tw-mailbox-list>
+
+  <router-outlet></router-outlet>
 </section>

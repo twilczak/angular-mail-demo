@@ -92,7 +92,7 @@
 
 3. Add mailbox-list component
 
-   `$ ng generate componet mailbox-list`
+   `$ ng generate component mailbox-list`
     
    Dumb components are responsible for presenting data - update container to pass observables to children
     
@@ -111,3 +111,13 @@
     Simple series of links to navigate between mailboxes
     
     Again, this needs to be declared in the mailbox component spec to prevent failures
+
+### Step 4 - Message Reader Component
+
+1. Add message-reader component
+
+   `$ ng generate component message-reader`
+   
+   Smart component for reading messages
+
+   Update routes and mailbox template to include child routing
