@@ -134,7 +134,7 @@
    
    Add resolvers, update routes
 
-### 5 - Delete Message
+### Step 5 - Delete Message
 
 1. Add service method to handle deletes, hide message on delete
 
@@ -148,11 +148,15 @@
 
    Message component populates mailbox, Message Reader removes successfully deleted messages
 
-### 6 - Message Composer
+### Step 6 - Message Composer
 
 1. Create message-composer component
 
    `$ ng generate component message-composer`
 
    Smart component, handles send and cancel
+   
+2. Update Routes
+
+   Use message-composer for 'compose' routes
    
