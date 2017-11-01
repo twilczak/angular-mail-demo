@@ -42,3 +42,7 @@ a {
   color: #afafaf;
   background: white;
 }
+
+router-outlet {
+  display: none;
+}

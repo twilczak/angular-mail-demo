@@ -57,6 +57,15 @@ export class MailService {
       .catch(this.handleError);
   }
 
+  sendMessage(message: MailMessage): Observable<MailMessage> {
+    const url = `${this.hostUrl}/outbox`;
+
+    return this.http
+      .post(url, message)
+      .map(res => res.json() as MailMessage)
+      .catch(this.handleError);
+  }
+
   handleError(e) {
     console.error(e);
     return Observable.throw(new Error(e));

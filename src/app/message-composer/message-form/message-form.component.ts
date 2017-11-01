@@ -28,9 +28,12 @@ export class MessageFormComponent implements OnInit {
 
   send() {
     const message = new MailMessage();
+
     message.sender = 'Me';
     message.recipient = this.messageForm.value.recipient;
     message.subject = this.messageForm.value.subject;
+    message.body = this.messageForm.value.body;
+
     this.sendMessage.emit(message);
   }
 }
