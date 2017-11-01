@@ -12,6 +12,8 @@ import { MessageReaderComponent } from './message-reader/message-reader.componen
 import { MessageDetailComponent } from './message-reader/message-detail/message-detail.component';
 import { MailboxService } from './mailbox.service';
 import { MessageComposerComponent } from './message-composer/message-composer.component';
+import { MessageFormComponent } from './message-composer/message-form/message-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,11 +23,13 @@ import { MessageComposerComponent } from './message-composer/message-composer.co
     MailboxControlsComponent,
     MessageReaderComponent,
     MessageDetailComponent,
-    MessageComposerComponent
+    MessageComposerComponent,
+    MessageFormComponent
   ],
   imports: [
     AppRoutingModule,
     BrowserModule,
+    ReactiveFormsModule,
     HttpModule
   ],
   providers: [

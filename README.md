@@ -160,3 +160,8 @@
 
    Use message-composer for 'compose' routes
    
+3. Create message-form component
+
+   `$ ng generate component message-form`
+   
+   Somewhat dumb component, handles form validation, and input
