@@ -165,3 +165,7 @@
    `$ ng generate component message-form`
    
    Somewhat dumb component, handles form validation, and input
+
+4. Send Message
+
+   message-composer calls mail service and routes to view on success

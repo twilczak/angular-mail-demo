@@ -16,7 +16,7 @@ export class MailMessage {
 
   private setDateSent(date: Date = new Date()) {
     const day = MailMessage.zeroPad(date.getDate());
-    const month = MailMessage.zeroPad(date.getMonth());
+    const month = MailMessage.zeroPad(date.getMonth() + 1);
     const year = date.getFullYear();
 
     this.dateSent = `${year}.${month}.${day}`;
